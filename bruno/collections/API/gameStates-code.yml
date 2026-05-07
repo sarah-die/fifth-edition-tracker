@@ -1,0 +1,15 @@
+info:
+  name: gameStates/code
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{baseUrl}}/gameStates/53e10a04-ef75-4581-bce0-2b01617e9b63"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

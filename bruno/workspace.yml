@@ -1,0 +1,12 @@
+opencollection: 1.0.0
+info:
+  name: "5e-tracker"
+  type: workspace
+
+collections:
+  - name: "API"
+    path: "collections/API"
+
+specs:
+
+docs: ''
