@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { GameState } from './gameState.entity';
+import { log } from 'node:console';
 
 @Injectable()
 export class GameStatesService {
@@ -20,5 +21,10 @@ export class GameStatesService {
 
   async remove(id: number): Promise<void> {
     await this.GameStatesRepository.delete(id);
+  }
+
+  async create(gameState: Omit<GameState, "id">): Promise<GameState> {
+    console.log(gameState)
+    return this.GameStatesRepository.save(gameState);
   }
 }

@@ -5,9 +5,9 @@ export class GameState {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({unique: true})
   code: string;
 
-  @Column()
-  gameState: string;
+  @Column("simple-json")
+  state: {characters: []};
 }
